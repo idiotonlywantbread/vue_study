@@ -3,7 +3,7 @@
     <el-table
         :data="tableData"
         border
-        style="width: 100%">
+        style="width: 70%">
       <el-table-column
           fixed
           prop="id"
@@ -48,7 +48,7 @@ export default {
     },
     page(currentPage){
       const _this =this
-      axios.get('http://localhost:8123/book/findAll/'+ currentPage +'/6').then(function (resp) {
+      axios.get('http://localhost:8123/boo k/findAll/'+ currentPage +'/6').then(function (resp) {
         console.log(resp)
         _this.tableData = resp.data.content
         _this.total = resp.data.totalElements
