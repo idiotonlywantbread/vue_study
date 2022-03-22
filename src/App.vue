@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <el-container style="height: 500px; border: 1px solid #eee">
+ <div id="app">
+<!--    <el-container style="height: 500px; border: 1px solid #eee">
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        <!--        <el-menu :default-openeds="['1', '3']">
+        &lt;!&ndash;        <el-menu :default-openeds="['1', '3']">
                   <el-submenu index="1">
                     <template slot="title"><i class="el-icon-message"></i>导航一</template>
                       <el-menu-item index="1-1">选项1</el-menu-item>
@@ -13,8 +13,8 @@
                         <el-menu-item index="1-3-2">选项3-2</el-menu-item>
                       </el-submenu>
                   </el-submenu>
-                </el-menu>-->
-        <!--        $router.options 获取配置文件router index.js-->
+                </el-menu>&ndash;&gt;
+        &lt;!&ndash;        $router.options 获取配置文件router index.js&ndash;&gt;
         <el-menu>
           <el-submenu v-for="(item,index) in $router.options.routes" :index="index+''">
             <template slot="title"><i class="el-icon-message"></i>{{ item.name }}</template>
@@ -42,9 +42,9 @@
         </el-main>
       </el-container>
 
-    </el-container>
+    </el-container>-->
 
-
+   <router-view></router-view>
   </div>
 </template>
 
@@ -66,19 +66,6 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-.el-header {
-  background-color: #B3C0D1;
-  color: #333;
-  line-height: 60px;
-}
-
-.el-aside {
-  color: #333;
-}
 </style>
 
 <script>

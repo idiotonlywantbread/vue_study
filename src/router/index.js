@@ -4,14 +4,15 @@ import PageOne from "../views/PageOneView";
 import PageTwo from "../views/PageTwoView";
 import PageThree from "../views/PageThreeView";
 import PageFour from "../views/PageFourView";
-import App from "../App"
+// import App from "../App"
+import Index from "../views/Index"
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: "/",
     name: "导航1",
-    component: App,
+    component: Index,
     children: [
   {
     path: '/pageOne',
@@ -27,7 +28,7 @@ const routes = [
   {
     path:'navigation',
     name:"导航2",
-    component: app,
+    component: Index,
     children: [
       {
         path: '/pageThree',
@@ -44,7 +45,7 @@ const routes = [
   {
     path:'navigation',
     name:"导航3",
-    component: app,
+    component: Index,
     children: [
       {
         path: '/pageThree',
