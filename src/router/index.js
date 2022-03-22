@@ -13,6 +13,7 @@ const routes = [
     path: "/",
     name: "导航1",
     component: Index,
+    redirect:"pageOne",
     children: [
   {
     path: '/pageOne',
